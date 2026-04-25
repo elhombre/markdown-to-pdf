@@ -1,7 +1,7 @@
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
 
-import puppeteer, { type Browser } from 'puppeteer'
+import puppeteer, { type Browser } from 'puppeteer-core'
 
 import type { Diagnostic, PageBreakConfig, PdfConfig, RenderPdfInput, RenderPdfResult } from './types.js'
 

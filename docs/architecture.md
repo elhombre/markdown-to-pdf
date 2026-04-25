@@ -74,18 +74,18 @@ Responsibilities:
 - Save HTML artifacts when requested.
 - Print diagnostics and exit with correct status codes.
 
-## Why `markdown-it` And `puppeteer`
+## Why `markdown-it` And `puppeteer-core`
 
 Version 1 should use:
 
 - `markdown-it` for Markdown parsing and HTML rendering;
-- `puppeteer` for HTML-to-PDF rendering.
+- `puppeteer-core` for HTML-to-PDF rendering through a locally available browser.
 
 Reasons:
 
 - `markdown-it` is already used in this monorepo and fits the current TypeScript ESM setup.
 - The tool does not need a larger Markdown AST stack in v1.
-- `puppeteer` provides a direct `page.pdf()` flow and is sufficient for a document-export tool.
+- `puppeteer-core` provides a direct `page.pdf()` flow and is sufficient for a document-export tool without triggering browser downloads during package installation.
 - The same browser instance can be reused across multiple files in batch mode.
 
 `playwright` is a valid alternative, but it does not materially improve the v1 requirements enough to justify the heavier runtime model here.

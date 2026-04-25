@@ -13,14 +13,16 @@ The package includes:
 - section filtering;
 - ignored Markdown fragments;
 - manual and experimental automatic page breaks;
-- Puppeteer-backed PDF rendering.
+- Puppeteer Core-backed PDF rendering.
 
 ## Requirements
 
 - Node.js 20 or newer.
-- A browser runtime usable by Puppeteer.
+- A local browser runtime usable by Puppeteer.
 
-The package depends on `puppeteer`, so normal npm installs can use Puppeteer's managed browser. If that browser is unavailable, the renderer tries `PUPPETEER_EXECUTABLE_PATH` and common Chrome, Chromium, Edge, and Brave locations on macOS, Linux, and Windows.
+The package depends on `puppeteer-core`, not the full `puppeteer` package, so it does not download a browser during install. This keeps npm and GitHub installs predictable, including Yarn Git dependencies that pack the source package before use.
+
+At runtime, the renderer tries `PUPPETEER_EXECUTABLE_PATH` first, then common Chrome, Chromium, Edge, and Brave locations on macOS, Linux, and Windows.
 
 ## Install
 
