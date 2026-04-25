@@ -1,0 +1,59 @@
+{
+  "name": "markdown-to-pdf",
+  "version": "0.1.0",
+  "description": "Opinionated Markdown to PDF tool for quick, polished PDFs from simple text documents.",
+  "type": "module",
+  "license": "MIT",
+  "author": "El Hombre <elhombre.dev@gmail.com>",
+  "keywords": [
+    "markdown",
+    "pdf",
+    "cli",
+    "puppeteer",
+    "document"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "md2pdf": "./bin/md2pdf"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "default": "./dist/core/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "bin",
+    "dist",
+    "docs",
+    "examples",
+    "src",
+    "tsconfig.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "prepack": "npm run build",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1",
+    "markdown-it": "^14.1.0",
+    "puppeteer": "^24.24.1"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^24.12.2",
+    "typescript": "^5.9.3"
+  }
+}

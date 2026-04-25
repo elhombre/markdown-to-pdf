@@ -1,0 +1,37 @@
+{
+  // Keep only the selected level-2 sections in the exported PDF.
+  "sections": {
+    "mode": "include",
+    "headings": ["Summary", "Checklist", "Important"]
+  },
+
+  // Additional CSS files are loaded after the built-in theme.
+  "stylesheets": ["./pdf.extra.css"],
+
+  // Optional divider line above level-2 sections in the default theme.
+  "sectionDividers": {
+    "enabled": true
+  },
+
+  // Experimental: add browser-layout-aware page breaks before sections when
+  // the remaining printable area on the current page is too small.
+  "pageBreaks": {
+    "mode": "auto-sections",
+    "headingLevel": 2,
+    "minRemainingPageHeight": "28mm",
+    "keepHeadingWithNext": true,
+    "avoidParagraphSplit": true,
+    "maxUnbreakableParagraphHeight": "45mm",
+    "keepPreambleWithList": true
+  },
+
+  "pdf": {
+    "format": "A4",
+    "margin": {
+      "top": "18mm",
+      "right": "16mm",
+      "bottom": "20mm",
+      "left": "16mm"
+    }
+  }
+}

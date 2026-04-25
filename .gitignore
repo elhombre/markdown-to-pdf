@@ -1,2 +1,5 @@
 .*
+*.tgz
+dist/
+node_modules/
 !.gitignore

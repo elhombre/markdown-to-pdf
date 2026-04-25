@@ -1,0 +1,42 @@
+/*
+  Example stylesheet loaded after the built-in PDF theme.
+  Paths in `stylesheets` are resolved relative to your config file.
+*/
+
+.mdpdf-document {
+  color: #1f1c19;
+}
+
+h1 {
+  color: #2f5d50;
+}
+
+h2 {
+  color: #1c3f69;
+}
+
+a {
+  color: #225a8a;
+}
+
+blockquote {
+  border-left-color: #9db9d1;
+  color: #394958;
+}
+
+code {
+  background: #eef3f7;
+}
+
+pre {
+  background: #f7fafc;
+  border-color: #d9e3ea;
+}
+
+table th {
+  background: #edf4f8;
+}
+
+img {
+  border-radius: 10px;
+}
