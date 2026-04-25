@@ -34,8 +34,6 @@
     "dist",
     "docs",
     "examples",
-    "src",
-    "tsconfig.json",
     "README.md",
     "LICENSE"
   ],

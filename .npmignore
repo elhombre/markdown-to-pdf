@@ -1,0 +1,13 @@
+*
+
+!bin/
+!bin/**
+!dist/
+!dist/**
+!docs/
+!docs/**
+!examples/
+!examples/**
+!README.md
+!LICENSE
+!package.json
